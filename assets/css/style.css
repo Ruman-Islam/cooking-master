@@ -46,7 +46,7 @@ nav .container-fluid a {
 
 .food-item {
     cursor: pointer;
-    box-shadow: 0 0 10px gray;
+    box-shadow: 5px 5px 10px black;
 }
 
 .food-img-container {
@@ -55,7 +55,7 @@ nav .container-fluid a {
     padding: 10px;
     margin: 50px auto 0;
     border-radius: 5px;
-    box-shadow: 0 0 10px gray;
+    box-shadow: 0 0 5px black;
 }
 
 .food-img-container h4 {
@@ -73,8 +73,8 @@ nav .container-fluid a {
     padding: 30px 30px;
     text-align: center;
     margin: 110px auto;
-    background-color: transparent;
-    box-shadow: 3px 3px 8px dimgray;
+    background-color: white;
+    box-shadow: 3px 3px 8px black;
     border-radius: 10px;
     display: none;
 }
@@ -85,6 +85,7 @@ nav .container-fluid a {
 
 .invalid-message-area div {
     width: 300px;
+    color: red;
     text-align: center;
     margin: 50px auto 0;
 }
