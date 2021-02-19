@@ -1,0 +1,20 @@
+@media(max-width: 575px) {
+    .food-items {
+        display: block;
+    }
+    .food-item {
+        width: 250px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .input-box input {
+        width: 150px;
+    }
+    .food-img-container{
+        display: block;
+        width: 350px;
+    }
+    .food-img-container img {
+        width: 120px;
+    }
+}

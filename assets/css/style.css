@@ -46,7 +46,7 @@ nav .container-fluid a {
 
 .food-item {
     cursor: pointer;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 4px 4px 8px dimgray;
 }
 
 .food-img-container {
@@ -88,4 +88,18 @@ nav .container-fluid a {
     color: red;
     text-align: center;
     margin: 50px auto 0;
+}
+
+.copy-right{
+    margin: 342px 0 0 0;
+}
+
+.copy-right-content{
+    width: 260px;
+    margin: 0 auto;
+}
+
+.copy-right-content p{
+    font-family: tahoma;
+    font-size: 15px;
 }
