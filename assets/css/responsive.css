@@ -17,4 +17,10 @@
     .food-img-container img {
         width: 120px;
     }
+    .error-area{
+        width: 225px;
+    }
+    .error-area h2{
+        font-size: 15px;
+    }
 }
