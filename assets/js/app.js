@@ -1,14 +1,22 @@
+const searchBtn = document.querySelector('.search');
+const foodInput = document.querySelector('.food-input');
+
 //* Search Button Event Handler
-document.querySelector('.search').addEventListener('click', () => {
-    const foodInput = document.querySelector('.food-input').value;
-    if (foodInput === '') {
+searchBtn.addEventListener('click', () => {
+    if (foodInput.value === '') {
         showError('block', 'none', 'none', 'none');
     }
     else {
-        loadData(foodInput);
-        showError('none', 'block', 'none', 'none');;
+        toggleSpinner();
+        loadData(foodInput.value);
+        showError('none', 'block', 'none', 'none');
     }
 })
+
+foodInput.addEventListener("keypress", function (event) {
+    if (event.key === 'Enter')
+        searchBtn.click();
+});
 
 
 //* Function of Display Error Message
@@ -26,6 +34,7 @@ async function loadData(foodName) {
     const response = await fetch(url);
     const data = await response.json();
     displayFoodItems(data);
+    toggleSpinner();
 }
 
 
@@ -56,9 +65,11 @@ const displayFoodItems = data => {
 
 //* Display Food Info
 const displayFoodInfo = name => {
+    toggleSpinner();
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
         .then(response => response.json())
         .then(data => {
+            toggleSpinner();
             const ItemInfoContainer = document.querySelector('.food-info');
             const meal = data.meals[0];
             const foodInfo = `
@@ -86,6 +97,13 @@ const displayFoodInfo = name => {
             ItemInfoContainer.innerHTML = foodInfo;
         })
     showError('none', 'block', 'block', 'none');
+}
+
+
+//*Extra Feature 'Spinner'
+const toggleSpinner = () => {
+    const spinner = document.querySelector('.spinner-area');
+    spinner.classList.toggle('d-none');
 }
 
 
