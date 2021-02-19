@@ -91,15 +91,18 @@ nav .container-fluid a {
 }
 
 .copy-right{
+    text-align: center;
     margin-top: 342px;
 }
 
 .copy-right-content{
+    text-align: center;
     width: 260px;
     margin: 0 auto;
 }
 
 .copy-right-content p{
+    text-align: center;
     font-family: tahoma;
     font-size: 15px;
 }
