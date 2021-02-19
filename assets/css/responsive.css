@@ -1,4 +1,4 @@
-@media(max-width: 575px) {
+@media(max-width: 576px) {
     .food-items {
         display: block;
     }
@@ -22,5 +22,23 @@
     }
     .error-area h2{
         font-size: 15px;
+    }
+}
+
+@media(max-width: 992px){
+    .error-area{
+        width: 300px;
+    }
+    .error-area h2{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1300px){
+    .error-area{
+        width: 400px;
+    }
+    .error-area h2{
+        font-size: 30px;
     }
 }
